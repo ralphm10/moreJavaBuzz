@@ -29,4 +29,10 @@ public class JavaBuzzTest {
         String result = underTest.checkNumber(5);
         assertEquals("Buzz", result);
     }
+
+    @Test
+    public void returnsFizzBuzzIfDivisibleByFiveAndThree() {
+        String result = underTest.checkNumber(15);
+        assertEquals("FizzBuzz", result);
+    }
 }
