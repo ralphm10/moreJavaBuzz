@@ -1,27 +1,32 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class JavaBuzzTest {
 
+    private JavaBuzz underTest;
+
+    @Before
+    public void setUp() {
+        underTest = new JavaBuzz();
+    }
+
     @Test
     public void returnsNumber() {
-        JavaBuzz javabuzz = new JavaBuzz();
-        String result = javabuzz.checkNumber(1);
+        String result = underTest.checkNumber(1);
         assertEquals("1", result);
     }
 
     @Test
     public void returnsFizzIfDivisibleByThree() {
-        JavaBuzz javabuzz = new JavaBuzz();
-        String result = javabuzz.checkNumber(3);
+        String result = underTest.checkNumber(3);
         assertEquals("Fizz", result);
     }
 
     @Test
     public void returnsBuzzIfDivisibleByFive() {
-        JavaBuzz javabuzz = new JavaBuzz();
-        String result = javabuzz.checkNumber(5);
+        String result = underTest.checkNumber(5);
         assertEquals("Buzz", result);
     }
 }
